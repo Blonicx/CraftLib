@@ -9,7 +9,7 @@ import net.minecraft.resources.Identifier;
 /**
  * The GlobalIdentifier interface.
  * @author Blonicx
- * @version 2.0.0
+ * @version 2.1.0
  * @since 1.0.0
  */
 public interface GlobalIdentifier {
@@ -23,8 +23,10 @@ public interface GlobalIdentifier {
      */
     //? if >=1.21.11 {
     Identifier unwrap();
+    Identifier tryBuild();
     //?} else {
      /*ResourceLocation unwrap();
+     ResourceLocation tryBuild();
     *///?}
 }
 

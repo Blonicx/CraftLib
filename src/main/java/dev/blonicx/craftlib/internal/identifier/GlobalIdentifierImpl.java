@@ -9,27 +9,26 @@ import net.minecraft.resources.Identifier;
  *///?}
 
 public final class GlobalIdentifierImpl implements GlobalIdentifier {
-
-    //? if >=1.21.11 {
-    private final Identifier id;
-    //?} else {
-    /*private final ResourceLocation id;
-    *///?}
+    private final String namespace;
+    private final String path;
 
     public GlobalIdentifierImpl(String namespace, String path) {
-        //? if >=1.21.11 {
-        this.id = Identifier.fromNamespaceAndPath(namespace, path);
-        //?} else {
-         /*this.id = ResourceLocation.fromNamespaceAndPath(namespace, path);
-        *///?}
+        this.namespace = namespace;
+        this.path = path;
     }
 
-    public String namespace() { return id.getNamespace(); }
-    public String path() { return id.getPath(); }
+    public String namespace() { return namespace; }
+    public String path() { return path; }
 
     //? if >=1.21.11 {
-    public Identifier unwrap() { return id; }
+    public Identifier unwrap() { return Identifier.fromNamespaceAndPath(this.namespace, this.path); }
+
+    @Override
+    public Identifier tryBuild() { return Identifier.tryBuild(this.namespace, this.path); }
     //?} else {
-    /*public ResourceLocation unwrap() { return id; }
+    /*public ResourceLocation unwrap() { return ResourceLocation.fromNamespaceAndPath(this.namespace, this.path); }
+
+    @Override
+    public ResourceLocation tryBuild() { return ResourceLocation.tryBuild(this.namespace, this.path); }
     *///?}
 }
