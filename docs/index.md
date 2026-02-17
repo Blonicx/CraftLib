@@ -7,7 +7,7 @@
 CraftLib is a utility Library that helps developers have a consistent API even if the Mojang API changes intern.
 It provides Multi Version Solutions that make the life for multi-version Minecraft mods easier and more Stable
 
-## Installation
+## Usage
 You can use CraftLib in your Project using the Modrinth Maven Repo.
 
 build.gradle:

@@ -17,6 +17,10 @@ public interface GlobalIdentifier {
     String namespace();
     String path();
 
+    /**
+     * Returns an Identifier-Variant based on the Version
+     * @return Identifier-Variant
+     */
     //? if >=1.21.11 {
     Identifier unwrap();
     //?} else {

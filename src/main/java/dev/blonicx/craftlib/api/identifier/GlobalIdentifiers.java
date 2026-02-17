@@ -3,7 +3,7 @@ package dev.blonicx.craftlib.api.identifier;
 import dev.blonicx.craftlib.internal.identifier.GlobalIdentifierImpl;
 
 /**
- * Let you create new an GlobalIdentifier.
+ * Let you create a new GlobalIdentifier.
  * @author Blonicx
  * @version 1.0.0
  * @since 1.0.0
