@@ -13,9 +13,9 @@ public final class GlobalIdentifiers {
     private GlobalIdentifiers() {}
 
     /**
-     * Creates a new GlobalIdentifier
+     * Creates a new GlobalIdentifier.
      * @param namespace The namespace that the Identifier should be used in.
-     * @param path The path of the Identifier in the namespace
+     * @param path The path of the Identifier in the namespace.
      * @return Returns a new GlobalIdentifier.
      */
     public static GlobalIdentifier of(String namespace, String path) {

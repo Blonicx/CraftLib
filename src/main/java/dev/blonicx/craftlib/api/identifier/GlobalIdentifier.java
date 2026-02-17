@@ -7,7 +7,7 @@ import net.minecraft.resources.Identifier;
 *///?}
 
 /**
- * The GlobalIdentifier interface
+ * The GlobalIdentifier interface.
  * @author Blonicx
  * @version 2.0.0
  * @since 1.0.0
@@ -18,7 +18,7 @@ public interface GlobalIdentifier {
     String path();
 
     /**
-     * Returns an Identifier-Variant based on the Version
+     * Returns an Identifier-Variant based on the Version.
      * @return Identifier-Variant
      */
     //? if >=1.21.11 {

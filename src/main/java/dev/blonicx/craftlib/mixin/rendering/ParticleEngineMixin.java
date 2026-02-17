@@ -1,17 +1,17 @@
 package dev.blonicx.craftlib.mixin.rendering;
 
-
 import dev.blonicx.craftlib.internal.particle.ParticleEngineAccess;
 import net.minecraft.client.particle.*;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+
+import java.util.Map;
 
 //? if <= 1.21.8 {
 /*import net.minecraft.core.particles.ParticleGroup;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
-import org.spongepowered.asm.mixin.Final;
 
-import java.util.Map;
 import java.util.Queue;
  *///?}
 
@@ -21,9 +21,18 @@ public abstract class ParticleEngineMixin implements ParticleEngineAccess {
     @Shadow
     public abstract void clearParticles();
 
+    @Shadow
+    @Final
+    private Map<ParticleRenderType, ParticleGroup<?>> particles;
+
     @Override
     public void craftlib$clearParticles() {
         this.clearParticles();
+    }
+
+    @Override
+    public int craftlib$size() {
+        return particles.size();
     }
     //?} else {
     /*@Shadow @Final
@@ -44,6 +53,11 @@ public abstract class ParticleEngineMixin implements ParticleEngineAccess {
         particlesToAdd.clear();
         trackingEmitters.clear();
         trackedParticleCounts.clear();
+    }
+
+    @Override
+    public int craftlib$size() {
+        return particles.size();
     }
 *///?}
 }
