@@ -17,18 +17,38 @@ public interface GlobalIdentifier {
     String namespace();
     String path();
 
+    /**
+     * Checks if a given namespace is valid.
+     * @param namespace The namespace that should be checked.
+     * @return If the namespace is valid or not.
+     */
     boolean isValidNamespace(String namespace);
 
-    /**
-     * Returns an Identifier-Variant based on the Version.
-     * @return Identifier-Variant
-     */
     //? if >=1.21.11 {
+    /**
+     * Returns an unsafe Identifier-Variant based on the Version.
+     * @return Unsafe Identifier-Variant
+     */
     Identifier unwrap();
+
+    /**
+     * Returns a safe Identifier-Variant based on the Version.
+     * @return Safe Identifier-Variant
+     */
     Identifier tryBuild();
     //?} else {
-     /*ResourceLocation unwrap();
-     ResourceLocation tryBuild();
+
+    /*/^*
+     * Returns an unsafe ResourceLocation-Variant based on the Version.
+     * @return Unsafe ResourceLocation-Variant
+     ^/
+     ResourceLocation unwrap();
+
+    /^*
+     * Returns a safe ResourceLocation-Variant based on the Version.
+     * @return Safe ResourceLocation-Variant
+     ^/
+    ResourceLocation tryBuild();
     *///?}
 }
 
