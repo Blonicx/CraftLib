@@ -1,9 +1,24 @@
+# Project information
 site_name: CraftLib
+site_url: https://blonicx.github.io/CraftLib/
+site_author: Blonicx
+
+# Repository
+repo_name: blonicx/craftlib
+repo_url: https://github.com/blonicx/craftlib
+
+# Copyright
+copyright: Copyright &copy; 2026 Blonicx
+
 theme:
   name: material
+  favicon: img/icon.png
+  logo: img/icon.png
+
+  palette:
+    scheme: slate
 
 nav:
   - Home: index.md
   - Quick Start: quickstart.md
-  - Concepts: concepts.md
   - API Reference: api/index.html
