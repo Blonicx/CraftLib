@@ -18,6 +18,9 @@ jobs:
           distribution: temurin
           java-version: 21
 
+      - name: make gradle wrapper executable
+        run: chmod +x ./gradlew
+
       - name: Generate Javadoc
         run: ./gradlew javadoc
 
