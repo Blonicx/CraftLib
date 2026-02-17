@@ -17,6 +17,8 @@ public interface GlobalIdentifier {
     String namespace();
     String path();
 
+    boolean isValidNamespace(String namespace);
+
     /**
      * Returns an Identifier-Variant based on the Version.
      * @return Identifier-Variant
