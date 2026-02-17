@@ -1,16 +1,26 @@
 package dev.blonicx.craftlib.api.identifier;
 
-import java.util.function.Function;
+//? if >=1.21.11 {
+import net.minecraft.resources.Identifier;
+//?} else {
+/*import net.minecraft.resources.ResourceLocation;
+*///?}
 
 /**
  * The GlobalIdentifier interface
  * @author Blonicx
- * @version 1.0.0
+ * @version 2.0.0
  * @since 1.0.0
  */
 public interface GlobalIdentifier {
+
     String namespace();
     String path();
 
-    <T> T apply(Function<Object, T> fn);
+    //? if >=1.21.11 {
+    Identifier unwrap();
+    //?} else {
+     /*ResourceLocation unwrap();
+    *///?}
 }
+
