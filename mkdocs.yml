@@ -1,0 +1,9 @@
+site_name: CraftLib
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Quick Start: quickstart.md
+  - Concepts: concepts.md
+  - API Reference: api/index.html
