@@ -21,6 +21,7 @@ public interface GlobalIdentifier {
      * Checks if a given namespace is valid.
      * @param namespace The namespace that should be checked.
      * @return If the namespace is valid or not.
+     * @since 1.2.0
      */
     boolean isValidNamespace(String namespace);
 
@@ -28,12 +29,14 @@ public interface GlobalIdentifier {
     /**
      * Returns an unsafe Identifier-Variant based on the Version.
      * @return Unsafe Identifier-Variant
+     * @since 1.0.0
      */
     Identifier unwrap();
 
     /**
      * Returns a safe Identifier-Variant based on the Version.
      * @return Safe Identifier-Variant
+     * @since 1.2.0
      */
     Identifier tryBuild();
     //?} else {
@@ -41,12 +44,14 @@ public interface GlobalIdentifier {
     /*/^*
      * Returns an unsafe ResourceLocation-Variant based on the Version.
      * @return Unsafe ResourceLocation-Variant
+     * @since 1.0.0
      ^/
      ResourceLocation unwrap();
 
     /^*
      * Returns a safe ResourceLocation-Variant based on the Version.
      * @return Safe ResourceLocation-Variant
+     * @since 1.2.0
      ^/
     ResourceLocation tryBuild();
     *///?}
