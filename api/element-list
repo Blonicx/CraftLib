@@ -1,0 +1,6 @@
+dev.blonicx.craftlib
+dev.blonicx.craftlib.api.identifier
+dev.blonicx.craftlib.api.particle
+dev.blonicx.craftlib.internal.identifier
+dev.blonicx.craftlib.internal.particle
+dev.blonicx.craftlib.mixin.rendering
