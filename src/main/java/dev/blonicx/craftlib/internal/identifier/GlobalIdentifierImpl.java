@@ -24,13 +24,9 @@ public final class GlobalIdentifierImpl implements GlobalIdentifier {
     public Identifier unwrap() { return Identifier.fromNamespaceAndPath(this.namespace, this.path); }
 
     public Identifier tryBuild() { return Identifier.tryBuild(this.namespace, this.path); }
-
-    public boolean isValidNamespace(String namespace) { return Identifier.isValidNamespace(namespace); }
     //?} else {
     /*public ResourceLocation unwrap() { return ResourceLocation.fromNamespaceAndPath(this.namespace, this.path); }
 
     public ResourceLocation tryBuild() { return ResourceLocation.tryBuild(this.namespace, this.path); }
-
-    public boolean isValidNamespace(String namespace) { return ResourceLocation.isValidNamespace(namespace); }
     *///?}
 }

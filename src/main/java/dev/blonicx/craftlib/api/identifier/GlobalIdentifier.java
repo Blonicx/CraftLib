@@ -9,7 +9,7 @@ import net.minecraft.resources.Identifier;
 /**
  * The GlobalIdentifier interface.
  * @author Blonicx
- * @version 2.1.0
+ * @version 2.2.0
  * @since 1.0.0
  */
 public interface GlobalIdentifier {
@@ -19,11 +19,18 @@ public interface GlobalIdentifier {
 
     /**
      * Checks if a given namespace is valid.
+     *
      * @param namespace The namespace that should be checked.
      * @return If the namespace is valid or not.
      * @since 1.2.0
      */
-    boolean isValidNamespace(String namespace);
+    static boolean isValidNamespace(String namespace) {
+        //? if >=1.21.11 {
+        return Identifier.isValidNamespace(namespace);
+        //?} else {
+        /*return ResourceLocation.isValidNamespace(namespace);
+        *///?}
+    }
 
     //? if >=1.21.11 {
     /**
